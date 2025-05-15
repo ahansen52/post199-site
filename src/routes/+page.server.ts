@@ -8,6 +8,15 @@ export const load = (async () => {
 	// Get current date (without time) for comparison
 	const todayString = getTodayISOString();
 
+	// Fetch the hero image
+	const heroImageData = await sanityClient.fetch<SanityDocument>(
+		`
+		*[_type == "heroImage"][0] {
+			"heroImageUrl": image.asset->url
+		}
+	`
+	);
+
 	// Fetch events that are today or in the future
 	const upcomingEvents = await sanityClient.fetch<SanityDocument[]>(
 		`
@@ -44,6 +53,7 @@ export const load = (async () => {
 	}));
 
 	return {
+		heroImageUrl: heroImageData?.['heroImageUrl'],
 		upcomingEvents: formattedEvents,
 		downloadForms
 	};

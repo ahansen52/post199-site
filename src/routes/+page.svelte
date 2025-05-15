@@ -31,8 +31,6 @@
 		type Icon as LucideIcon
 	} from 'lucide-svelte';
 
-	import post199ImagePath from '$lib/assets/post_199.jpg?enhanced';
-
 	// Map icon names from Sanity to imported Lucide components
 	const icons: Record<string, typeof LucideIcon> = {
 		FileText,
@@ -126,12 +124,17 @@
 
 <section class="relative h-screen w-full overflow-hidden">
 	<!-- Image with overlay in one container -->
-	<enhanced:img
-		loading="eager"
-		src={post199ImagePath}
-		alt="American Legion Post 199 Members"
-		class="absolute inset-0 h-full w-full object-cover"
-	></enhanced:img>
+	{#if data.heroImageUrl}
+		<img
+			loading="eager"
+			src={data.heroImageUrl}
+			alt="American Legion Post 199 Hero"
+			class="absolute inset-0 h-full w-full object-cover"
+		/>
+	{:else}
+		<!-- Fallback or placeholder if heroImageUrl is not available -->
+		<div class="absolute inset-0 h-full w-full bg-gray-300"></div>
+	{/if}
 
 	<div class="absolute inset-0 bg-gradient-to-r from-gray-900/80 to-gray-900/60"></div>
 

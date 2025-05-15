@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://post199.org/sitemap.xml
+Sitemap: https://anthonymoscarellapost199.org/sitemap.xml

@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { dev } from '$app/environment';
+	import { SITE_URL } from '$lib/constants';
 
 	import { inject } from '@vercel/analytics';
 
@@ -24,7 +25,7 @@
 		content="American Legion, Post 199, Veterans, Spring Valley, Military, Community Service, Memorial Day, Veterans Day"
 	/>
 	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://post199.org" />
+	<meta property="og:url" content={SITE_URL} />
 	<meta property="og:title" content="American Legion Post 199" />
 	<meta property="og:description" content="Serving veterans and the community since 1919" />
 	<meta name="twitter:card" content="summary_large_image" />

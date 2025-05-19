@@ -14,7 +14,7 @@ export async function fetchHistoricalMoments({
 	const end = start + limit;
 
 	const query = `
-        *[_type == "historicalMoments"] | order(year desc, month desc, day desc) {
+        *[_type == "historicalMoments"] | order(orderRank) {
             _id,
             year,
             month,

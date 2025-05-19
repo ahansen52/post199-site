@@ -5,7 +5,7 @@ import type { PageServerLoad } from './$types';
 
 export const load = (async () => {
 	const events = await sanityClient.fetch<SanityDocument[]>(`
-		*[_type == "events"] | order(date asc) {
+		*[_type == "events"] | order(orderRank) {
 			title,
 			date,
 			time,

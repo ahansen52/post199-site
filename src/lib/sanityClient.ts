@@ -12,7 +12,7 @@ export const sanityClient: SanityClient = createClient({
 	projectId: PUBLIC_SANITY_PROJECT_ID,
 	dataset: PUBLIC_SANITY_DATASET,
 	apiVersion: '2025-04-12', // Use a recent API version
-	useCdn: true // Set to true for better cost-effectiveness with read operations
+	useCdn: false
 });
 
 // --- urlFor Function (Client-Safe) ---

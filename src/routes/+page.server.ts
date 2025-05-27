@@ -4,6 +4,9 @@ import type { DownloadFormType } from '$lib/types';
 import type { SanityDocument } from '@sanity/client';
 import type { PageServerLoad } from './$types';
 
+// Disable prerendering for this page to ensure events are filtered with current date
+export const prerender = false;
+
 export const load = (async () => {
 	// Get current date (without time) for comparison
 	const todayString = getTodayISOString();

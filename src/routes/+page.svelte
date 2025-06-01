@@ -141,7 +141,7 @@
 	<!-- Content directly in the section -->
 	<div class="container relative flex h-full items-center md:items-end md:justify-center md:pb-20">
 		<div class="max-w-2xl space-y-6 text-white md:text-center">
-			<div class="inline-block rounded-lg bg-white/20 px-3 py-1 text-lg backdrop-blur-sm">
+			<div class="inline-block rounded-lg bg-white/30 px-3 py-1 text-lg backdrop-blur-sm">
 				Established 1919
 			</div>
 

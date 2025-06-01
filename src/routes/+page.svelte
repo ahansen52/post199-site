@@ -139,8 +139,8 @@
 	<div class="absolute inset-0 bg-black/50"></div>
 
 	<!-- Content directly in the section -->
-	<div class="container relative flex h-full items-center">
-		<div class="max-w-2xl space-y-6 text-white">
+	<div class="container relative flex h-full items-center md:items-end md:justify-center md:pb-20">
+		<div class="max-w-2xl space-y-6 text-white md:text-center">
 			<div class="inline-block rounded-lg bg-white/20 px-3 py-1 text-lg backdrop-blur-sm">
 				Established 1919
 			</div>
@@ -153,7 +153,7 @@
 				Serving veterans and the community in Spring Valley, NY since 1919
 			</p>
 
-			<div class="flex flex-wrap gap-4">
+			<div class="flex flex-wrap gap-4 md:justify-center">
 				<Button href="#forms-section" size="lg" class=" bg-red-700 hover:bg-red-800">
 					<span class="text-lg">Become a Member</span>
 					<ChevronRight class="size-4" />

@@ -129,19 +129,19 @@
 			loading="eager"
 			src={data.heroImageUrl}
 			alt="American Legion Post 199 Hero"
-			class="absolute inset-0 h-full w-full object-cover"
+			class="absolute inset-0 size-full object-cover"
 		/>
 	{:else}
 		<!-- Fallback or placeholder if heroImageUrl is not available -->
-		<div class="absolute inset-0 h-full w-full bg-gray-300"></div>
+		<div class="absolute inset-0 size-full bg-gray-300"></div>
 	{/if}
 
-	<div class="absolute inset-0 bg-gradient-to-r from-gray-900/80 to-gray-900/60"></div>
+	<div class="absolute inset-0 bg-black/50"></div>
 
 	<!-- Content directly in the section -->
 	<div class="container relative flex h-full items-center">
 		<div class="max-w-2xl space-y-6 text-white">
-			<div class="inline-block rounded-lg bg-white/10 px-3 py-1 text-lg backdrop-blur-sm">
+			<div class="inline-block rounded-lg bg-white/20 px-3 py-1 text-lg backdrop-blur-sm">
 				Established 1919
 			</div>
 

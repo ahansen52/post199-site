@@ -141,10 +141,6 @@
 	<!-- Content directly in the section -->
 	<div class="container relative flex h-full items-end justify-center pb-6">
 		<div class="max-w-2xl space-y-5 text-center text-white">
-			<div class="inline-block rounded-lg bg-white/30 px-3 py-1 text-lg backdrop-blur-sm">
-				Established 1919
-			</div>
-
 			<h1 class="text-balance text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
 				Welcome to American Legion Post 199
 			</h1>

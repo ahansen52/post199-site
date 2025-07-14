@@ -140,7 +140,7 @@
 
 	<!-- Content directly in the section -->
 	<div class="container relative flex h-full items-end justify-center pb-6">
-		<div class="max-w-2xl space-y-6 text-center text-white">
+		<div class="max-w-2xl space-y-5 text-center text-white">
 			<div class="inline-block rounded-lg bg-white/30 px-3 py-1 text-lg backdrop-blur-sm">
 				Established 1919
 			</div>

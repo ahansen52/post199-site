@@ -136,7 +136,7 @@
 		<div class="absolute inset-0 size-full bg-gray-300"></div>
 	{/if}
 
-	<div class="absolute inset-0 bg-black/50"></div>
+	<div class="absolute inset-0 bg-black/40"></div>
 
 	<!-- Content directly in the section -->
 	<div class="container relative flex h-full items-end justify-center pb-6">

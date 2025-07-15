@@ -14,7 +14,7 @@ export const load = (async () => {
 	// Fetch the hero image
 	const heroImageData = await sanityClient.fetch<SanityDocument>(
 		`
-		*[_type == "heroImage"][0] {
+		*[_type == "heroImage" && _id == "heroImage-singleton"] {
 			"heroImageUrl": image.asset->url
 		}
 	`
@@ -56,7 +56,7 @@ export const load = (async () => {
 	}));
 
 	return {
-		heroImageUrl: heroImageData?.['heroImageUrl'],
+		heroImageUrl: heroImageData[0].heroImageUrl,
 		upcomingEvents: formattedEvents,
 		downloadForms
 	};

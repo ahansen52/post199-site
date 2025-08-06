@@ -1,5 +1,47 @@
 <script lang="ts">
 	import { Award, Calendar, Crown, Star, Trophy, Users } from 'lucide-svelte';
+
+	// Charter Members (1923)
+	const charterMembers = [
+		{ name: 'Mrs. Eloise May Levine', isFirstPresident: true },
+		{ name: 'Mrs. Antonetta Moscarella', isFirstPresident: false },
+		{ name: 'Mrs. Sayde Brill', isFirstPresident: false },
+		{ name: 'Mrs. Marnice Sanderson', isFirstPresident: false },
+		{ name: 'Mrs. Edna Wallace', isFirstPresident: false },
+		{ name: 'Mrs. Grace Rosenbrock', isFirstPresident: false },
+		{ name: 'Mrs. Clara Benjamin', isFirstPresident: false },
+		{ name: 'Mrs. Alma Grahn', isFirstPresident: false },
+		{ name: 'Mrs. Mary Sherwood', isFirstPresident: false },
+		{ name: 'Mrs. Kate D. Moles', isFirstPresident: false },
+		{ name: 'Mrs. Martha Cureton', isFirstPresident: false },
+		{ name: 'Mrs. Anna Voorhis', isFirstPresident: false },
+		{ name: 'Ms. Carrie Schaefer', isFirstPresident: false },
+		{ name: 'Mrs. Nora Moles', isFirstPresident: false }
+	];
+
+	// Post Leadership (1928)
+	const postLeadership = [
+		'James Cureton',
+		'Raymond Silas Pitt',
+		'Harry Ball',
+		'John R. Collins',
+		'Sol Wallant',
+		'Donald R. Sherwood',
+		'Frank Krulish',
+		'R. I. Stelley',
+		'Mackey Rackow',
+		'George Sanderson'
+	];
+
+	// Certificate Signatories (1928)
+	const certificateSignatories = [
+		'Silas Raymond Pitt',
+		'John R. Collins',
+		'Sol Wallant',
+		'Donald R. Sherwood',
+		'Frank Krulish',
+		'Sidney Kearsing'
+	];
 </script>
 
 <svelte:head>
@@ -22,31 +64,13 @@
 <section
 	class="relative min-h-[80vh] overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900"
 >
-	<!-- Enhanced decorative elements -->
-	<div
-		class="absolute -top-40 left-1/4 z-0 h-80 w-80 animate-pulse rounded-full bg-blue-500/20 blur-3xl"
-	></div>
-	<div
-		class="absolute -bottom-40 right-1/4 z-0 h-80 w-80 animate-pulse rounded-full bg-red-500/15 blur-3xl delay-1000"
-	></div>
-	<div
-		class="bg-white/8 absolute left-1/2 top-1/2 z-0 h-96 w-96 -translate-x-1/2 -translate-y-1/2 transform rounded-full blur-3xl"
-	></div>
-	<div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-
-	<!-- Subtle pattern overlay -->
-	<div
-		class="absolute inset-0 opacity-5"
-		style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0);background-size: 40px 40px;"
-	></div>
-
 	<div class="relative flex min-h-[80vh] items-center justify-center px-4">
 		<div class="max-w-5xl text-center text-white">
 			<!-- Main title with enhanced typography -->
 			<div class="mb-6 space-y-2">
 				<h1 class="bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent">
-					<span class="block text-2xl font-semibold md:text-3xl">Ladies Auxiliary</span>
-					<span class="block text-4xl font-bold md:text-7xl lg:text-8xl">Moscarella Unit 199</span>
+					<span class="block text-2xl font-semibold md:text-4xl">Ladies Auxiliary</span>
+					<span class="block text-4xl font-bold md:text-6xl">Moscarella Unit 199</span>
 				</h1>
 			</div>
 
@@ -133,59 +157,30 @@
 
 				<!-- Charter Members -->
 				<div class="rounded-lg border border-slate-200 bg-slate-50 p-6">
-					<h5 class="mb-4 flex items-center gap-2 font-bold text-slate-900">
+					<h5 class="mb-4 flex items-center gap-2 text-lg font-bold text-slate-900">
 						<Crown class="h-5 w-5 text-slate-600" />
 						Charter Members
 					</h5>
 					<div class="grid grid-cols-1 gap-3 sm:grid-cols-2">
-						<div class="rounded-lg border border-slate-300 bg-white p-3">
-							<div class="flex items-center gap-2">
-								<Crown class="h-4 w-4 text-slate-600" />
-								<div>
-									<p class="font-semibold text-slate-900">Mrs. Eloise May Levine</p>
-									<p class="text-xs text-slate-600">First President</p>
-								</div>
+						{#each charterMembers as member}
+							<div
+								class="rounded-lg border {member.isFirstPresident
+									? 'border-slate-300'
+									: 'border-slate-200'} bg-white p-3"
+							>
+								{#if member.isFirstPresident}
+									<div class="flex items-center gap-2">
+										<Crown class="h-4 w-4 text-slate-600" />
+										<div>
+											<p class="font-semibold text-slate-900">{member.name}</p>
+											<p class="text-xs text-slate-600">First President</p>
+										</div>
+									</div>
+								{:else}
+									<p class="text-sm font-medium text-slate-900">{member.name}</p>
+								{/if}
 							</div>
-						</div>
-						<div class="rounded-lg border border-slate-200 bg-white p-3">
-							<p class="text-sm font-medium text-slate-900">Mrs. Antonetta Moscarella</p>
-						</div>
-						<div class="rounded-lg border border-slate-200 bg-white p-3">
-							<p class="text-sm font-medium text-slate-900">Mrs. Sayde Brill</p>
-						</div>
-						<div class="rounded-lg border border-slate-200 bg-white p-3">
-							<p class="text-sm font-medium text-slate-900">Mrs. Marnice Sanderson</p>
-						</div>
-						<div class="rounded-lg border border-slate-200 bg-white p-3">
-							<p class="text-sm font-medium text-slate-900">Mrs. Edna Wallace</p>
-						</div>
-						<div class="rounded-lg border border-slate-200 bg-white p-3">
-							<p class="text-sm font-medium text-slate-900">Mrs. Grace Rosenbrock</p>
-						</div>
-						<div class="rounded-lg border border-slate-200 bg-white p-3">
-							<p class="text-sm font-medium text-slate-900">Mrs. Clara Benjamin</p>
-						</div>
-						<div class="rounded-lg border border-slate-200 bg-white p-3">
-							<p class="text-sm font-medium text-slate-900">Mrs. Alma Grahn</p>
-						</div>
-						<div class="rounded-lg border border-slate-200 bg-white p-3">
-							<p class="text-sm font-medium text-slate-900">Mrs. Mary Sherwood</p>
-						</div>
-						<div class="rounded-lg border border-slate-200 bg-white p-3">
-							<p class="text-sm font-medium text-slate-900">Mrs. Kate D. Moles</p>
-						</div>
-						<div class="rounded-lg border border-slate-200 bg-white p-3">
-							<p class="text-sm font-medium text-slate-900">Mrs. Martha Cureton</p>
-						</div>
-						<div class="rounded-lg border border-slate-200 bg-white p-3">
-							<p class="text-sm font-medium text-slate-900">Mrs. Anna Voorhis</p>
-						</div>
-						<div class="rounded-lg border border-slate-200 bg-white p-3">
-							<p class="text-sm font-medium text-slate-900">Ms. Carrie Schaefer</p>
-						</div>
-						<div class="rounded-lg border border-slate-200 bg-white p-3">
-							<p class="text-sm font-medium text-slate-900">Mrs. Nora Moles</p>
-						</div>
+						{/each}
 					</div>
 				</div>
 			</div>
@@ -209,69 +204,31 @@
 				<div class="grid gap-6 md:grid-cols-2">
 					<!-- Post Leadership -->
 					<div class="rounded-lg border border-slate-200 bg-slate-50 p-6">
-						<h5 class="mb-4 flex items-center gap-2 font-bold text-slate-900">
+						<h5 class="mb-4 flex items-center gap-2 text-lg font-bold text-slate-900">
 							<Users class="h-5 w-5 text-slate-600" />
 							Post Leadership
 						</h5>
 						<div class="space-y-2">
-							<div class="rounded border border-slate-200 bg-white p-2">
-								<p class="text-sm font-medium text-slate-900">James Cureton</p>
-							</div>
-							<div class="rounded border border-slate-200 bg-white p-2">
-								<p class="text-sm font-medium text-slate-900">Raymond Silas Pitt</p>
-							</div>
-							<div class="rounded border border-slate-200 bg-white p-2">
-								<p class="text-sm font-medium text-slate-900">Harry Ball</p>
-							</div>
-							<div class="rounded border border-slate-200 bg-white p-2">
-								<p class="text-sm font-medium text-slate-900">John R. Collins</p>
-							</div>
-							<div class="rounded border border-slate-200 bg-white p-2">
-								<p class="text-sm font-medium text-slate-900">Sol Wallant</p>
-							</div>
-							<div class="rounded border border-slate-200 bg-white p-2">
-								<p class="text-sm font-medium text-slate-900">Donald R. Sherwood</p>
-							</div>
-							<div class="rounded border border-slate-200 bg-white p-2">
-								<p class="text-sm font-medium text-slate-900">Frank Krulish</p>
-							</div>
-							<div class="rounded border border-slate-200 bg-white p-2">
-								<p class="text-sm font-medium text-slate-900">R. I. Stelley</p>
-							</div>
-							<div class="rounded border border-slate-200 bg-white p-2">
-								<p class="text-sm font-medium text-slate-900">Mackey Rackow</p>
-							</div>
-							<div class="rounded border border-slate-200 bg-white p-2">
-								<p class="text-sm font-medium text-slate-900">George Sanderson</p>
-							</div>
+							{#each postLeadership as leader}
+								<div class="rounded border border-slate-200 bg-white p-2">
+									<p class="text-sm font-medium text-slate-900">{leader}</p>
+								</div>
+							{/each}
 						</div>
 					</div>
 
 					<!-- Certificate Signatories -->
 					<div class="rounded-lg border border-slate-200 bg-slate-50 p-6">
-						<h5 class="mb-4 flex items-center gap-2 font-bold text-slate-900">
+						<h5 class="mb-4 flex items-center gap-2 text-lg font-bold text-slate-900">
 							<Award class="h-5 w-5 text-slate-600" />
 							Certificate Signatories
 						</h5>
 						<div class="space-y-2">
-							<div class="rounded border border-slate-200 bg-white p-2">
-								<p class="text-sm font-medium text-slate-900">Silas Raymond Pitt</p>
-							</div>
-							<div class="rounded border border-slate-200 bg-white p-2">
-								<p class="text-sm font-medium text-slate-900">John R. Collins</p>
-							</div>
-							<div class="rounded border border-slate-200 bg-white p-2">
-								<p class="text-sm font-medium text-slate-900">Sol Wallant</p>
-							</div>
-							<div class="rounded border border-slate-200 bg-white p-2">
-								<p class="text-sm font-medium text-slate-900">Donald R. Sherwood</p>
-							</div>
-							<div class="rounded border border-slate-200 bg-white p-2">
-								<p class="text-sm font-medium text-slate-900">Frank Krulish</p>
-							</div>
-							<div class="rounded border border-slate-200 bg-white p-2">
-								<p class="text-sm font-medium text-slate-900">Sidney Kearsing</p>
-							</div>
+							{#each certificateSignatories as signatory}
+								<div class="rounded border border-slate-200 bg-white p-2">
+									<p class="text-sm font-medium text-slate-900">{signatory}</p>
+								</div>
+							{/each}
 						</div>
 						<div class="mt-4 rounded border border-slate-200 bg-white p-3">
 							<p class="text-xs italic text-slate-700">
@@ -336,7 +293,7 @@
 				</p>
 
 				<div class="rounded-lg border border-slate-200 bg-slate-50 p-6">
-					<h5 class="mb-3 flex items-center gap-2 font-bold text-slate-900">
+					<h5 class="mb-3 flex items-center gap-2 text-lg font-bold text-slate-900">
 						<Star class="h-5 w-5 text-slate-600" />
 						Key Leaders
 					</h5>
@@ -371,7 +328,7 @@
 				<div class="grid gap-6 md:grid-cols-2">
 					<!-- Maureen's Achievement -->
 					<div class="rounded-lg border border-slate-200 bg-slate-50 p-6">
-						<h5 class="mb-3 flex items-center gap-2 font-bold text-slate-900">
+						<h5 class="mb-3 flex items-center gap-2 text-lg font-bold text-slate-900">
 							<Crown class="h-5 w-5 text-slate-600" />
 							Department President
 						</h5>
@@ -389,7 +346,7 @@
 
 					<!-- Current Unit Leadership -->
 					<div class="rounded-lg border border-slate-200 bg-slate-50 p-6">
-						<h5 class="mb-3 flex items-center gap-2 font-bold text-slate-900">
+						<h5 class="mb-3 flex items-center gap-2 text-lg font-bold text-slate-900">
 							<Users class="h-5 w-5 text-slate-600" />
 							Unit Leadership
 						</h5>

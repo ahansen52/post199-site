@@ -62,55 +62,45 @@
 </svelte:head>
 
 <section
-	class="relative min-h-[80vh] overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900"
+	class="relative bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 px-2 pb-20 pt-40 text-center text-white"
 >
-	<div class="relative flex min-h-[80vh] items-center justify-center px-4">
-		<div class="max-w-5xl text-center text-white">
-			<!-- Main title with enhanced typography -->
-			<div class="mb-6 space-y-2">
-				<h1 class="bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent">
-					<span class="block text-2xl font-semibold md:text-4xl">Ladies Auxiliary</span>
-					<span class="block text-4xl font-bold md:text-6xl">Moscarella Unit 199</span>
-				</h1>
+	<div>
+		<h1 class="mb-8 text-balance">
+			<span class="block text-2xl font-semibold md:text-4xl">Ladies Auxiliary</span>
+			<span class="block text-4xl font-bold md:text-6xl">Moscarella Unit 199</span>
+		</h1>
+
+		<p class="mb-10 text-balance text-xl font-light md:text-2xl lg:text-3xl">
+			Supporting veterans and their families since 1923
+		</p>
+
+		<div class="mb-8 flex flex-wrap justify-center gap-4">
+			<div
+				class="group flex items-center gap-2 rounded-full border border-blue-400/30 bg-gradient-to-r from-blue-600/30 to-blue-500/30 px-6 py-3 text-sm font-semibold backdrop-blur-sm transition-all hover:border-blue-300/50 hover:from-blue-600/40 hover:to-blue-500/40"
+			>
+				<Calendar class="size-4" />
+
+				<span>Established 1923 </span>
 			</div>
 
-			<p class="mb-10 text-xl font-light text-blue-100 md:text-2xl lg:text-3xl">
-				Supporting veterans and their families since 1923
+			<div
+				class="group relative overflow-hidden rounded-full border border-green-400/30 bg-gradient-to-r from-green-600/30 to-emerald-500/30 px-6 py-3 backdrop-blur-sm transition-all hover:border-green-300/50 hover:from-green-600/40 hover:to-emerald-500/40"
+			>
+				<div
+					class="absolute inset-0 bg-gradient-to-r from-green-400/10 to-transparent opacity-0 transition-opacity group-hover:opacity-100"
+				></div>
+				<span class="relative flex items-center gap-2 text-sm font-semibold">
+					<Users class="h-4 w-4" />
+					Reactivated 2024
+				</span>
+			</div>
+		</div>
+
+		<!-- Call to action -->
+		<div class="text-blue-200">
+			<p class="text-lg font-light">
+				Making history with the first dual member Department President from Rockland County
 			</p>
-
-			<!-- Enhanced badges with better styling -->
-			<div class="mb-8 flex flex-wrap justify-center gap-4">
-				<div
-					class="group relative overflow-hidden rounded-full border border-blue-400/30 bg-gradient-to-r from-blue-600/30 to-blue-500/30 px-6 py-3 backdrop-blur-sm transition-all hover:border-blue-300/50 hover:from-blue-600/40 hover:to-blue-500/40"
-				>
-					<div
-						class="absolute inset-0 bg-gradient-to-r from-blue-400/10 to-transparent opacity-0 transition-opacity group-hover:opacity-100"
-					></div>
-					<span class="relative flex items-center gap-2 text-sm font-semibold">
-						<Calendar class="h-4 w-4" />
-						Established 1923
-					</span>
-				</div>
-
-				<div
-					class="group relative overflow-hidden rounded-full border border-green-400/30 bg-gradient-to-r from-green-600/30 to-emerald-500/30 px-6 py-3 backdrop-blur-sm transition-all hover:border-green-300/50 hover:from-green-600/40 hover:to-emerald-500/40"
-				>
-					<div
-						class="absolute inset-0 bg-gradient-to-r from-green-400/10 to-transparent opacity-0 transition-opacity group-hover:opacity-100"
-					></div>
-					<span class="relative flex items-center gap-2 text-sm font-semibold">
-						<Users class="h-4 w-4" />
-						Reactivated 2024
-					</span>
-				</div>
-			</div>
-
-			<!-- Call to action -->
-			<div class="text-blue-200">
-				<p class="text-lg font-light">
-					Making history with the first dual member Department President from Rockland County
-				</p>
-			</div>
 		</div>
 	</div>
 </section>

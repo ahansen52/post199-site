@@ -169,7 +169,7 @@
 		</div>
 
 		<!-- 1928 - Official Incorporation -->
-		<div class="rounded-xl border border-slate-300 bg-white p-8 shadow-lg">
+		<div class="rounded-xl border bg-white p-8 shadow-lg">
 			<div class="mb-6 flex items-center gap-3">
 				<div class="rounded-full border-2 border-slate-300 p-3">
 					<Award class="h-8 w-8 text-slate-600" />
@@ -225,7 +225,7 @@
 		</div>
 
 		<!-- Charter Turned In Period -->
-		<div class="rounded-xl border border-slate-300 bg-white p-8 shadow-lg">
+		<div class="rounded-xl border bg-white p-8 shadow-lg">
 			<div class="mb-6 flex items-center gap-3">
 				<div class="rounded-full border-2 border-slate-300 p-3">
 					<Users class="h-8 w-8 text-slate-600" />
@@ -243,7 +243,7 @@
 		</div>
 
 		<!-- 2019 - Regulation Changes -->
-		<div class="rounded-xl border border-slate-300 bg-white p-8 shadow-lg">
+		<div class="rounded-xl border bg-white p-8 shadow-lg">
 			<div class="mb-6 flex items-center gap-3">
 				<div class="rounded-full border-2 border-slate-300 p-3">
 					<Award class="h-8 w-8 text-slate-600" />
@@ -261,7 +261,7 @@
 		</div>
 
 		<!-- 2024 - Reactivation -->
-		<div class="rounded-xl border border-slate-300 bg-white p-8 shadow-lg">
+		<div class="rounded-xl border bg-white p-8 shadow-lg">
 			<div class="mb-6 flex items-center gap-3">
 				<div class="rounded-full border-2 border-slate-300 p-3">
 					<Users class="h-8 w-8 text-slate-600" />
@@ -294,7 +294,7 @@
 		</div>
 
 		<!-- 2025 - Historic Achievement -->
-		<div class="rounded-xl border border-slate-300 bg-white p-8 shadow-lg">
+		<div class="rounded-xl border bg-white p-8 shadow-lg">
 			<div class="mb-6 flex items-center gap-3">
 				<div class="rounded-full border-2 border-slate-300 p-3">
 					<Trophy class="h-8 w-8 text-slate-600" />

@@ -65,7 +65,7 @@
 	class="relative bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 px-2 pb-20 pt-40 text-center text-white"
 >
 	<h1 class="mb-8 text-balance">
-		<span class="block text-2xl font-semibold md:text-4xl">Ladies Auxiliary</span>
+		<span class="block text-2xl font-semibold md:text-4xl">American Legion Auxiliary</span>
 		<span class="block text-4xl font-bold md:text-6xl">Moscarella Unit 199</span>
 	</h1>
 
@@ -111,8 +111,8 @@
 
 		<p class="mb-12 text-balance text-xl leading-relaxed text-slate-600">
 			From humble beginnings in 1923 to historic leadership in 2025, follow the journey of the
-			Ladies Auxiliary Moscarella Unit 199 through over a century of dedicated service to veterans
-			and community.
+			American Legion Auxiliary Moscarella Unit 199 through over a century of dedicated service to
+			veterans and community.
 		</p>
 	</div>
 

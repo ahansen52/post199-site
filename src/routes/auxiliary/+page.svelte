@@ -132,8 +132,8 @@
 			</div>
 
 			<p class="mb-6 leading-relaxed text-slate-700">
-				The Ladies Auxiliary for Moscarella Unit 199 was organized at a meeting of the Unit, held at
-				the Spring Valley Hook and Ladder facility. Mrs. Eloise May Levine was elected its first
+				The Auxiliary for Moscarella Unit 199 was organized at a meeting of the Unit, held at the
+				Spring Valley Hook and Ladder facility. Mrs. Eloise May Levine was elected its first
 				president. In addition to Mrs. Levine, the charter members were:
 			</p>
 
